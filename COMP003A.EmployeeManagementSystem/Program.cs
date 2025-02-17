@@ -31,6 +31,14 @@ namespace COMP003A.EmployeeManagementSystem
                 employees.Add(new Employee(employeeId, firstName, lastName, salary, middleName));\
 
                 Console.WriteLine("\nEmployee Created Successfully!\n");
+
+                // Display employee information
+                foreach (var employee in employees)
+                {
+                    employee.DisplayEmployeeInfo();
+                }
+
+                //
             }
         }
     }
