@@ -28,7 +28,7 @@ namespace COMP003A.EmployeeManagementSystem
                 double salary = double.Parse(Console.ReadLine());
 
                 // Add the new employee to the list
-                employees.Add(new Employee(employeeId, firstName, lastName, salary, middleName));\
+                employees.Add(new Employee(employeeId, firstName, lastName, salary, middleName));
 
                 Console.WriteLine("\nEmployee Created Successfully!\n");
 
@@ -38,7 +38,26 @@ namespace COMP003A.EmployeeManagementSystem
                     employee.DisplayEmployeeInfo();
                 }
 
-                //
+                // Creating instances of departments
+                HRDepartment hr = new HRDepartment("Human Resources");
+                ITDepartment it = new ITDepartment("IT");
+
+                // Display department information and operations
+                hr.DisplayDepartmentInfo();
+                Console.WriteLine($"Details: {hr.GetDepartmentDetails()}");
+                hr.Operate();
+
+                it.DisplayDepartmentInfo();
+                Console.WriteLine($"Details: {it.GetDepartmentDetails()}");
+                it.Operate();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Error: Invalid input format. Please enter valid values. {ex.Message}");
             }
         }
     }
