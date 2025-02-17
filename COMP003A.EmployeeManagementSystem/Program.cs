@@ -16,15 +16,15 @@ namespace COMP003A.EmployeeManagementSystem
                 List<Employee> employees = new List<Employee>();
 
                 // Adding an employee with user input
-                Console.WriteLine("Enter Employee ID:");
+                Console.Write("Enter Employee ID: ");
                 string employeeId = Console.ReadLine();
-                Console.WriteLine("Enter First Name:");
+                Console.Write("Enter First Name: ");
                 string firstName = Console.ReadLine();
-                Console.WriteLine("Enter Middle Name (Press Enter to Skip);");
+                Console.Write("Enter Middle Name (Press Enter to Skip): ");
                 string middleName = Console.ReadLine();
-                Console.WriteLine("Enter Last Name:");
+                Console.Write("Enter Last Name: ");
                 string lastName = Console.ReadLine();
-                Console.WriteLine("Enter Salary:");
+                Console.Write("Enter Salary: ");
                 double salary = double.Parse(Console.ReadLine());
 
                 // Add the new employee to the list
@@ -36,6 +36,7 @@ namespace COMP003A.EmployeeManagementSystem
                 foreach (var employee in employees)
                 {
                     employee.DisplayEmployeeInfo();
+                    Console.WriteLine();
                 }
 
                 // Creating instances of departments
@@ -46,6 +47,7 @@ namespace COMP003A.EmployeeManagementSystem
                 hr.DisplayDepartmentInfo();
                 Console.WriteLine($"Details: {hr.GetDepartmentDetails()}");
                 hr.Operate();
+                Console.WriteLine();
 
                 it.DisplayDepartmentInfo();
                 Console.WriteLine($"Details: {it.GetDepartmentDetails()}");

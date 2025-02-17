@@ -31,6 +31,7 @@ namespace COMP003A.EmployeeManagementSystem
             {
                 if (string.IsNullOrEmpty(value))
                     throw new ArgumentNullException("First name cannot be empty or null. ");
+                _firstName = value;
             }
         }
 
