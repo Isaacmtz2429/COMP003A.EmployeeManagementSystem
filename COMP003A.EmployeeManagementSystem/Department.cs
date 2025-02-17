@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace COMP003A.EmployeeManagementSystem
 {
+    /// <summary>
+    /// Abstract class representing a department
+    /// </summary>
     public abstract class Department
     {
         public string DepartmentName { get; set; }
